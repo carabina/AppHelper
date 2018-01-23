@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		205276D920173C5000CDA3CF /* AppHelper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 206125962017267100D86A09 /* AppHelper.framework */; };
+		205276DA20173C5000CDA3CF /* AppHelper.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 206125962017267100D86A09 /* AppHelper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		206125A52017269600D86A09 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206125A42017269600D86A09 /* AppDelegate.swift */; };
 		206125A72017269600D86A09 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206125A62017269600D86A09 /* ViewController.swift */; };
 		206125AC2017269600D86A09 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 206125AB2017269600D86A09 /* Assets.xcassets */; };
@@ -19,6 +21,30 @@
 		206125CC20172C7E00D86A09 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 206125CB20172C7E00D86A09 /* Main.storyboard */; };
 		206125CE20172C9700D86A09 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 206125CD20172C9700D86A09 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		205276DB20173C5000CDA3CF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 20612574201725E600D86A09 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 206125952017267100D86A09;
+			remoteInfo = AppHelper;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		205276DD20173C5000CDA3CF /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				205276DA20173C5000CDA3CF /* AppHelper.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		206125962017267100D86A09 /* AppHelper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AppHelper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -50,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				205276D920173C5000CDA3CF /* AppHelper.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -204,10 +231,12 @@
 				2061259E2017269600D86A09 /* Sources */,
 				2061259F2017269600D86A09 /* Frameworks */,
 				206125A02017269600D86A09 /* Resources */,
+				205276DD20173C5000CDA3CF /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				205276DC20173C5000CDA3CF /* PBXTargetDependency */,
 			);
 			name = Example;
 			productName = Example;
@@ -297,6 +326,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		205276DC20173C5000CDA3CF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 206125952017267100D86A09 /* AppHelper */;
+			targetProxy = 205276DB20173C5000CDA3CF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		2061258C201725E600D86A09 /* Debug */ = {
@@ -462,6 +499,7 @@
 		206125B22017269600D86A09 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CJR9U4F7KL;
@@ -478,6 +516,7 @@
 		206125B32017269600D86A09 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CJR9U4F7KL;
